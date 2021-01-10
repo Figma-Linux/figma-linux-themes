@@ -7,10 +7,12 @@ The central repository of themes for Figma Linux
 To create your theme click on "Theme Creator" in the main menu. The Theme Creator modal opens. There are input fields for theme name and theme author. Below is a preview area and zoom under it. On the left is the color palette of Your new theme and two buttons under it. The button "Apply theme" applies Your theme to the app, and that's how you can test your theme in real UI of an app. The button "Export" exports your theme as a valid json file. You can publish this file in this repository via Pull Request system.
 All theme files are located in the  theme directory.
 
-![create_theme.gif](https://raw.githubusercontent.com/Figma-Linux/figma-linux-themes/master/create_theme.gif)
+<p style="display: flex; align-items: center">
+    <img src="https://github.com/Figma-Linux/figma-linux-themes/raw/master/youtube_icon.png" width="32" style="margin-right: 10px">
+    <a href="https://youtu.be/B5It6MfJnOs">Create theme video</a>
+</p>
 
-
-### Publish theme
-
-
-![create_theme.gif](https://raw.githubusercontent.com/Figma-Linux/figma-linux-themes/master/publish_theme.gif)
+<p style="display: flex; align-items: center">
+    <img src="https://github.com/Figma-Linux/figma-linux-themes/raw/master/youtube_icon.png" width="32" style="margin-right: 10px">
+    <a href="https://youtu.be/4MeYil97yxs">Publish theme video</a>
+</p>
