@@ -9,10 +9,10 @@ All theme files are located in the  theme directory.
 
 <p>
     <img src="https://github.com/Figma-Linux/figma-linux-themes/raw/master/youtube_icon.png" width="32">
-    <a href="https://youtu.be/B5It6MfJnOs">Create theme video</a>
+    <a href="https://youtu.be/B5It6MfJnOs" target="_blank">Create theme video</a>
 </p>
 
 <p>
     <img src="https://github.com/Figma-Linux/figma-linux-themes/raw/master/youtube_icon.png" width="32">
-    <a href="https://youtu.be/4MeYil97yxs">Publish theme video</a>
+    <a href="https://youtu.be/4MeYil97yxs" target="_blank">Publish theme video</a>
 </p>
