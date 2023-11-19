@@ -13,17 +13,6 @@ jobs:
           fetch-depth: 0
 
       - name: Check
-        run: |
-          pull_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
-          echo "pull_number=${pull_number}";
-          gh pr view ${pull_number} --json files -q '".files[].path"'
-          files=$(gh pr view ${pull_number} --json files -q '".files[].path"')
-
-          for file in ${files}; do
-            if [[ "$file" =~ \.json$ ]]; then
-              echo "$file was changed"
-              # gh api repos/Figma-Linux/figma-linux-themes/contents/PATH
-            fi
-          done
+        run: ./.github/check.sh
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
