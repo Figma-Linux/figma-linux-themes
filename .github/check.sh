@@ -34,5 +34,4 @@ do
   fi
 done
 
-echo "Merge!";
-# gh pr -R Figma-Linux/figma-linux-themes merge ${pull_number} -s -d
+gh pr -R Figma-Linux/figma-linux-themes merge ${pull_number} -s -d
