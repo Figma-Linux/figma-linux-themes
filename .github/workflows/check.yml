@@ -7,8 +7,12 @@ jobs:
     name: Check
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: Check
-        run: |
-          pull_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
-          echo "pull_number=${pull_number}";
-          gh pr view ${pull_number} --json
+        run: ./.github/check.sh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
