@@ -12,7 +12,6 @@ do
     themeName="$(echo "$content" | jq '.name' | tr -d '\"')"
     themeAutor="$(echo "$content" | jq '.author' | tr -d '\"')"
 
-    themeName=""
     if [[ -z "${themeName}" ]]; then
       echo "Invalid theme name";
       exit 1
