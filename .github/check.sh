@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set e
+
 pull_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
 files=$(gh pr -R Figma-Linux/figma-linux-themes view ${pull_number} --json files -q '.files[].path')
 
