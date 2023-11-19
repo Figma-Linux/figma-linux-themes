@@ -14,7 +14,6 @@ jobs:
 
       - name: Check
         run: |
-          set +e
           ./.github/check.sh
           exitcode="$?"
           echo "exitcode=$exitcode" >> $GITHUB_OUTPUT
