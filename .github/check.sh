@@ -10,6 +10,7 @@ do
       themeName="$(echo "$content" | jq '.name' | tr -d '\"')"
       themeAutor="$(echo "$content" | jq '.author' | tr -d '\"')"
 
+      themeName=""
       if [[ -z "${themeName}" ]]; then
         echo "Invalid theme name";
         exit -1
@@ -32,4 +33,5 @@ do
     fi
 done
 
-gh pr -R Figma-Linux/figma-linux-themes merge ${pull_number} -s -d
+echo "Merge!";
+# gh pr -R Figma-Linux/figma-linux-themes merge ${pull_number} -s -d
