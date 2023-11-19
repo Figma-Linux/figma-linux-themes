@@ -11,4 +11,4 @@ jobs:
         run: |
           pull_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
           echo "pull_number=${pull_number}";
-          gh pr view ${pull_number} --json
+          gh pr view ${pull_number}
