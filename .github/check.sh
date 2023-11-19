@@ -29,4 +29,4 @@ do
     fi
 done
 
-gh pr merge ${pull_number}
+gh pr -R Figma-Linux/figma-linux-themes merge ${pull_number} -s
