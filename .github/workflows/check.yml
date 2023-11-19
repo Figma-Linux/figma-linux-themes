@@ -13,6 +13,11 @@ jobs:
           fetch-depth: 0
 
       - name: Check
-        run: ./.github/check.sh
+        run: |
+          ./.github/check.sh
+          exitcode="$?"
+          echo "exitcode=$exitcode" >> $GITHUB_OUTPUT
+          exit "$exitcode"
+
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
