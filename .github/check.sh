@@ -26,7 +26,10 @@ do
         echo "Invalid theme author name";
         exit -1
       fi
+    else
+      echo "PR has other files which is not a theme. Need maintainer review!"
+      exit -1
     fi
 done
 
-gh pr -R Figma-Linux/figma-linux-themes merge ${pull_number} -s
+gh pr -R Figma-Linux/figma-linux-themes merge ${pull_number} -s -d
