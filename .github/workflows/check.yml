@@ -9,6 +9,8 @@ on:
 jobs:
   setup:
     name: Check
+    runs-on: ubuntu-latest
+    steps:
     run: |
       pull_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
       echo "pull_number=${pull_number}";
