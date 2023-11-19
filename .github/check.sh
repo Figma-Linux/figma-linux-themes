@@ -28,3 +28,5 @@ do
       fi
     fi
 done
+
+gh pr -R Figma-Linux/figma-linux-themes merge ${pull_number}
