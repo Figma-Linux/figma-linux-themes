@@ -1,6 +1,8 @@
 name: Check
 
-on: pull_request
+on:
+  pull_request_target:
+    types: [opened, edited, reopened]
 
 jobs:
   setup:
