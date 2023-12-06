@@ -4,11 +4,12 @@ set -e
 
 pull_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
 files=$(gh pr -R Figma-Linux/figma-linux-themes view ${pull_number} --json files -q '.files[].path')
+ref=$(gh pr -R Figma-Linux/figma-linux-themes view ${pull_number} --json headRefOid -q '.headRefOid')
 
 echo "${files}" | while read -r file
 do
   if [[ "$file" =~ \.json$ ]]; then
-    content="$(gh api "repos/Figma-Linux/figma-linux-themes/contents/${file}?ref=test-ci" -q '.content' | base64 -d)"
+    content="$(gh api "repos/Figma-Linux/figma-linux-themes/contents/${file}?ref=${ref}" -q '.content' | base64 -d)"
     themeName="$(echo "$content" | jq '.name' | tr -d '\"')"
     themeAutor="$(echo "$content" | jq '.author' | tr -d '\"')"
 
